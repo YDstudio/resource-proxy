@@ -3,6 +3,7 @@
 There are several recommended solutions to use instead of your own resource-proxy:
 
 * Enable [CORS](http://enable-cors.org/server.html) on the non-CORS enabled web server.
+* Use [API keys](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/api-keys/) to use services and access private content.
 * Configure your security settings in [ArcGIS Online](https://doc.arcgis.com/en/arcgis-online/administer/configure-security.htm) or [ArcGIS Enterprise](https://enterprise.arcgis.com/en/portal/latest/administer/windows/configure-security.htm). 
 * Access secure services [using ArcGIS Online](https://doc.arcgis.com/en/arcgis-online/reference/arcgis-server-services.htm#ESRI_SECTION1_FEB0DF92DA064B6A970DFB59A18AA4C2) to store your username/password credentials. 
 
@@ -48,13 +49,6 @@ Ensure that you follow the [Terms & Conditions](https://developers.arcgis.com/te
 ## Troubleshooting
 
 * Watch the web requests being handled by the proxy to ensure that the proxy and the web resource locations are correct and properly configured in the application. Use something like [Fiddler](http://www.telerik.com/fiddler) or developer tools like [Network panel in Chrome Developer Tools](https://developer.chrome.com/devtools/docs/network#network-panel-overview).
-
-## Product Resources
-
-* [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/latest/guide/proxies/)
-* [Web AppBuilder for ArcGIS (Developer Edition)](https://developers.arcgis.com/web-appbuilder/guide/use-proxy.htm)
-* [Esri Leaflet](https://developers.arcgis.com/authentication/working-with-proxies/#esri-leaflet)
-* [Setting up a Proxy blog](http://blogs.esri.com/esri/supportcenter/2015/04/07/setting-up-a-proxy)
 
 ## Proxy Configuration Settings
 
@@ -109,7 +103,7 @@ Example of a tag for a resource which does not require authentication
 
 ## Issues
 
-Found a bug or want to request a new feature? Check out previously logged [Issues](https://github.com/Esri/resource-proxy/issues) and/or our [FAQ](FAQ.md).  If you don't see what you're looking for, feel free to submit a [new issue](https://github.com/Esri/resource-proxy/issues/new).
+Found a bug? Check out previously logged [Issues](https://github.com/Esri/resource-proxy/issues) and/or our [FAQ](FAQ.md).  If you don't see what you're looking for, feel free to submit a [new issue](https://github.com/Esri/resource-proxy/issues/new).
 
 ## Contributing
 
