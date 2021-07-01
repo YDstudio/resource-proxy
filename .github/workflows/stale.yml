@@ -3,12 +3,14 @@ name: "Close stale issues"
 # Controls when the workflow will run
 on:
   schedule:
-    - cron: "0 22 * * *"
+    - cron: "0 23 * * *"
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # stale:
-  state-stuff:
+  stale-check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/stale@v3
@@ -19,6 +21,7 @@ jobs:
           close-issue-message: "This issue has been automatically closed due to inactivity."
           close-pr-message: "This PR has been automatically closed due to inactivity."
           # exempt-issue-labels: "0 - new,1 - assigned"
+          only-labels: null
           days-before-issue-stale: 1000
           days-before-issue-close: 31
           days-before-pr-stale: 1000
@@ -26,4 +29,4 @@ jobs:
           delete-branch: true
           
           # Run the processor in debug mode without actually performing any operations on live issues.
-          debug-only: true # optional, default is false
+          # debug-only: true # optional, default is false
